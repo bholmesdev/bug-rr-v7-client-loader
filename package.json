@@ -1,5 +1,5 @@
 {
-  "name": "hubble-talk",
+  "name": "bug-repro",
   "private": true,
   "type": "module",
   "scripts": {

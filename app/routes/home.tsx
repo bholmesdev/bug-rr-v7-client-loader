@@ -7,6 +7,10 @@ export function meta({}: Route.MetaArgs) {
   ];
 }
 
-export default function Home() {
-  return <h1>Welcome to React Router!</h1>;
+export function clientLoader({}: Route.ClientLoaderArgs) {
+  return { hello: true };
+}
+
+export default function Home({ loaderData }: Route.ComponentProps) {
+  return loaderData.hello ? <h1>Welcome to React Router!</h1> : null;
 }
